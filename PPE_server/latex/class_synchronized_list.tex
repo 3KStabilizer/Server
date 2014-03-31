@@ -1,0 +1,99 @@
+\hypertarget{class_synchronized_list}{\section{Synchronized\-List Class Reference}
+\label{class_synchronized_list}\index{Synchronized\-List@{Synchronized\-List}}
+}
+
+
+provide a list with mutex machinism to allow mutual access from different thread  
+
+
+
+
+{\ttfamily \#include $<$Synchronized\-List.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_synchronized_list_a4d431ece7d5172c6c57a6987959c7a7a}{\hyperlink{class_synchronized_list_a4d431ece7d5172c6c57a6987959c7a7a}{Synchronized\-List} ()}\label{class_synchronized_list_a4d431ece7d5172c6c57a6987959c7a7a}
+
+\begin{DoxyCompactList}\small\item\em main constructor \end{DoxyCompactList}\item 
+\hypertarget{class_synchronized_list_a98c56ce4918c800f0797d25b7babd9c9}{\hyperlink{class_synchronized_list_a98c56ce4918c800f0797d25b7babd9c9}{$\sim$\-Synchronized\-List} ()}\label{class_synchronized_list_a98c56ce4918c800f0797d25b7babd9c9}
+
+\begin{DoxyCompactList}\small\item\em main destructor \end{DoxyCompactList}\item 
+void \hyperlink{class_synchronized_list_a3692cd14b2b0b87e3f0a7fda2c60146e}{add\-Element} (std\-::string str)
+\begin{DoxyCompactList}\small\item\em add securely an element to the list \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_synchronized_list_aaa6cca1aca8b521122220fa663e739bf}{get\-First\-Element} ()
+\begin{DoxyCompactList}\small\item\em get and remove securely the first element of the list \end{DoxyCompactList}\item 
+bool \hyperlink{class_synchronized_list_a9f53b9e155f7aa66aa437b096fbd89ea}{is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em check if the current list is empty \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::list$<$ std\-::string $>$ \hyperlink{class_synchronized_list_a6a2606ff4d4d94a591d24e8f0a411ccf}{queue}
+\item 
+pthread\-\_\-mutex\-\_\-t \hyperlink{class_synchronized_list_ad692f6b0c6a239f75bd9e78c6e0d4825}{mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provide a list with mutex machinism to allow mutual access from different thread 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_synchronized_list_a3692cd14b2b0b87e3f0a7fda2c60146e}{\index{Synchronized\-List@{Synchronized\-List}!add\-Element@{add\-Element}}
+\index{add\-Element@{add\-Element}!SynchronizedList@{Synchronized\-List}}
+\subsubsection[{add\-Element}]{\setlength{\rightskip}{0pt plus 5cm}void Synchronized\-List\-::add\-Element (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{str}
+\end{DoxyParamCaption}
+)}}\label{class_synchronized_list_a3692cd14b2b0b87e3f0a7fda2c60146e}
+
+
+add securely an element to the list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the element to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_synchronized_list_aaa6cca1aca8b521122220fa663e739bf}{\index{Synchronized\-List@{Synchronized\-List}!get\-First\-Element@{get\-First\-Element}}
+\index{get\-First\-Element@{get\-First\-Element}!SynchronizedList@{Synchronized\-List}}
+\subsubsection[{get\-First\-Element}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Synchronized\-List\-::get\-First\-Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_synchronized_list_aaa6cca1aca8b521122220fa663e739bf}
+
+
+get and remove securely the first element of the list 
+
+\begin{DoxyReturn}{Returns}
+std\-::string the first element 
+\end{DoxyReturn}
+\hypertarget{class_synchronized_list_a9f53b9e155f7aa66aa437b096fbd89ea}{\index{Synchronized\-List@{Synchronized\-List}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!SynchronizedList@{Synchronized\-List}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Synchronized\-List\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_synchronized_list_a9f53b9e155f7aa66aa437b096fbd89ea}
+
+
+check if the current list is empty 
+
+\begin{DoxyReturn}{Returns}
+bool true if empty false otherwise 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_synchronized_list_ad692f6b0c6a239f75bd9e78c6e0d4825}{\index{Synchronized\-List@{Synchronized\-List}!mutex@{mutex}}
+\index{mutex@{mutex}!SynchronizedList@{Synchronized\-List}}
+\subsubsection[{mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t Synchronized\-List\-::mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_synchronized_list_ad692f6b0c6a239f75bd9e78c6e0d4825}
+the mutex to prevent from concurrent modification \hypertarget{class_synchronized_list_a6a2606ff4d4d94a591d24e8f0a411ccf}{\index{Synchronized\-List@{Synchronized\-List}!queue@{queue}}
+\index{queue@{queue}!SynchronizedList@{Synchronized\-List}}
+\subsubsection[{queue}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$std\-::string$>$ Synchronized\-List\-::queue\hspace{0.3cm}{\ttfamily [private]}}}\label{class_synchronized_list_a6a2606ff4d4d94a591d24e8f0a411ccf}
+the queue itself 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Synchronized\-List.\-h\item 
+Synchronized\-List.\-cpp\end{DoxyCompactItemize}

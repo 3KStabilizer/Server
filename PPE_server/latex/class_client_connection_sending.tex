@@ -1,0 +1,125 @@
+\hypertarget{class_client_connection_sending}{\section{Client\-Connection\-Sending Class Reference}
+\label{class_client_connection_sending}\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}}
+}
+
+
+provide method to connect to the client for sending purpose  
+
+
+
+
+{\ttfamily \#include $<$Client\-Connection\-Sending.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_client_connection_sending_a4bd1618c88ecf3d1c615f822db712e3d}{Client\-Connection\-Sending} (\hyperlink{class_synchronized_list}{Synchronized\-List} $\ast$o)
+\begin{DoxyCompactList}\small\item\em main constructor \end{DoxyCompactList}\item 
+\hypertarget{class_client_connection_sending_a9f38a9ed716468834d7a7244a807869f}{\hyperlink{class_client_connection_sending_a9f38a9ed716468834d7a7244a807869f}{$\sim$\-Client\-Connection\-Sending} ()}\label{class_client_connection_sending_a9f38a9ed716468834d7a7244a807869f}
+
+\begin{DoxyCompactList}\small\item\em main destructor \end{DoxyCompactList}\item 
+\hypertarget{class_client_connection_sending_a3d8637f8bdd5a88d3ed4b8fc529a81c3}{void \hyperlink{class_client_connection_sending_a3d8637f8bdd5a88d3ed4b8fc529a81c3}{init\-Connection} ()}\label{class_client_connection_sending_a3d8637f8bdd5a88d3ed4b8fc529a81c3}
+
+\begin{DoxyCompactList}\small\item\em initialize all the parameters for connection \end{DoxyCompactList}\item 
+bool \hyperlink{class_client_connection_sending_a8e5778b853d18c1a2e7f69bdeba85fce}{wait\-For\-Client} ()
+\begin{DoxyCompactList}\small\item\em wait for a client to connect \end{DoxyCompactList}\item 
+bool \hyperlink{class_client_connection_sending_afde57541ba6e1e52c2a77c79874ec4fc}{send\-Data} ()
+\begin{DoxyCompactList}\small\item\em send data to client \end{DoxyCompactList}\item 
+\hypertarget{class_client_connection_sending_aa5efbbd9b6650460a083453596fc8372}{void \hyperlink{class_client_connection_sending_aa5efbbd9b6650460a083453596fc8372}{connection\-Loop} ()}\label{class_client_connection_sending_aa5efbbd9b6650460a083453596fc8372}
+
+\begin{DoxyCompactList}\small\item\em call the previous function to assure the entire connection process \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_client_connection_sending_a94e310425cce20a9ca04e2fc8f9edc4e}{sck}
+\item 
+int \hyperlink{class_client_connection_sending_a9d593090ef980ec12a906f05c7049f8a}{client\-Socket}
+\item 
+int \hyperlink{class_client_connection_sending_a46f6eb02dfb831e080e1af31c8cb6e19}{port}
+\item 
+struct sockaddr\-\_\-in \hyperlink{class_client_connection_sending_a46e362e1ad62b3bae76885281fe99a21}{serv\-\_\-addr}
+\item 
+struct sockaddr\-\_\-in \hyperlink{class_client_connection_sending_aec17aabe2499433189a97fae837c1cdd}{cli\-\_\-addr}
+\item 
+\hyperlink{class_synchronized_list}{Synchronized\-List} $\ast$ \hyperlink{class_client_connection_sending_a148ca07a2280bd684561fc2943d5fc9d}{to\-Send}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provide method to connect to the client for sending purpose 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_client_connection_sending_a4bd1618c88ecf3d1c615f822db712e3d}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!Client\-Connection\-Sending@{Client\-Connection\-Sending}}
+\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{Client\-Connection\-Sending}]{\setlength{\rightskip}{0pt plus 5cm}Client\-Connection\-Sending\-::\-Client\-Connection\-Sending (
+\begin{DoxyParamCaption}
+\item[{{\bf Synchronized\-List} $\ast$}]{o}
+\end{DoxyParamCaption}
+)}}\label{class_client_connection_sending_a4bd1618c88ecf3d1c615f822db712e3d}
+
+
+main constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & pointer on list of data to send \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_client_connection_sending_afde57541ba6e1e52c2a77c79874ec4fc}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!send\-Data@{send\-Data}}
+\index{send\-Data@{send\-Data}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{send\-Data}]{\setlength{\rightskip}{0pt plus 5cm}bool Client\-Connection\-Sending\-::send\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_client_connection_sending_afde57541ba6e1e52c2a77c79874ec4fc}
+
+
+send data to client 
+
+\begin{DoxyReturn}{Returns}
+bool true when finish 
+\end{DoxyReturn}
+\hypertarget{class_client_connection_sending_a8e5778b853d18c1a2e7f69bdeba85fce}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!wait\-For\-Client@{wait\-For\-Client}}
+\index{wait\-For\-Client@{wait\-For\-Client}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{wait\-For\-Client}]{\setlength{\rightskip}{0pt plus 5cm}bool Client\-Connection\-Sending\-::wait\-For\-Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_client_connection_sending_a8e5778b853d18c1a2e7f69bdeba85fce}
+
+
+wait for a client to connect 
+
+\begin{DoxyReturn}{Returns}
+bool return true on connection 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_client_connection_sending_aec17aabe2499433189a97fae837c1cdd}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!cli\-\_\-addr@{cli\-\_\-addr}}
+\index{cli\-\_\-addr@{cli\-\_\-addr}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{cli\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\-\_\-in Client\-Connection\-Sending\-::cli\-\_\-addr\hspace{0.3cm}{\ttfamily [private]}}}\label{class_client_connection_sending_aec17aabe2499433189a97fae837c1cdd}
+address of the client \hypertarget{class_client_connection_sending_a9d593090ef980ec12a906f05c7049f8a}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!client\-Socket@{client\-Socket}}
+\index{client\-Socket@{client\-Socket}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{client\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}int Client\-Connection\-Sending\-::client\-Socket\hspace{0.3cm}{\ttfamily [private]}}}\label{class_client_connection_sending_a9d593090ef980ec12a906f05c7049f8a}
+socket of the connected client \hypertarget{class_client_connection_sending_a46f6eb02dfb831e080e1af31c8cb6e19}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!port@{port}}
+\index{port@{port}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}int Client\-Connection\-Sending\-::port\hspace{0.3cm}{\ttfamily [private]}}}\label{class_client_connection_sending_a46f6eb02dfb831e080e1af31c8cb6e19}
+port \hypertarget{class_client_connection_sending_a94e310425cce20a9ca04e2fc8f9edc4e}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!sck@{sck}}
+\index{sck@{sck}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{sck}]{\setlength{\rightskip}{0pt plus 5cm}int Client\-Connection\-Sending\-::sck\hspace{0.3cm}{\ttfamily [private]}}}\label{class_client_connection_sending_a94e310425cce20a9ca04e2fc8f9edc4e}
+socket of the server \hypertarget{class_client_connection_sending_a46e362e1ad62b3bae76885281fe99a21}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!serv\-\_\-addr@{serv\-\_\-addr}}
+\index{serv\-\_\-addr@{serv\-\_\-addr}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{serv\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\-\_\-in Client\-Connection\-Sending\-::serv\-\_\-addr\hspace{0.3cm}{\ttfamily [private]}}}\label{class_client_connection_sending_a46e362e1ad62b3bae76885281fe99a21}
+address of the server \hypertarget{class_client_connection_sending_a148ca07a2280bd684561fc2943d5fc9d}{\index{Client\-Connection\-Sending@{Client\-Connection\-Sending}!to\-Send@{to\-Send}}
+\index{to\-Send@{to\-Send}!ClientConnectionSending@{Client\-Connection\-Sending}}
+\subsubsection[{to\-Send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Synchronized\-List}$\ast$ Client\-Connection\-Sending\-::to\-Send\hspace{0.3cm}{\ttfamily [private]}}}\label{class_client_connection_sending_a148ca07a2280bd684561fc2943d5fc9d}
+list of data to send 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Client\-Connection\-Sending.\-h\item 
+Client\-Connection\-Sending.\-cpp\end{DoxyCompactItemize}

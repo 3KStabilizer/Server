@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1392648872 source:/home/vince/PPE_server/PPE_server/main.cpp
+	"ClientConnection.h"
+
+1392657675 /home/vince/PPE_server/PPE_server/ClientConnection.h
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<strings.h>
+
+1395573594 source:/home/vince/Téléchargements/PPE_server/main.cpp
+	"ClientConnection.h"
+	"ClientConnectionSending.h"
+	"HardwareCommunication.h"
+	<pthread.h>
+
+1395574182 /home/vince/Téléchargements/PPE_server/ClientConnection.h
+	<cstdio>
+	<cstdlib>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<strings.h>
+	"SynchronizedList.h"
+
+1395574337 /home/vince/Téléchargements/PPE_server/SynchronizedList.h
+	<iostream>
+	<list>
+	<pthread.h>
+
+1395574084 /home/vince/Téléchargements/PPE_server/ClientConnectionSending.h
+	<iostream>
+	<string>
+	<cstring>
+	<cstdio>
+	<cstdlib>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	"SynchronizedList.h"
+
+1395573551 source:/home/vince/Téléchargements/PPE_server/HardwareCommunication.cpp
+	"HardwareCommunication.h"
+	<iostream>
+
+1395573507 /home/vince/Téléchargements/PPE_server/HardwareCommunication.h
+
+1395869748 source:/home/vince/Téléchargements/PPE_server/ClientConnection.cpp
+	"ClientConnection.h"
+
+1395784611 source:/home/vince/Téléchargements/PPE_server/ClientConnectionSending.cpp
+	"ClientConnectionSending.h"
+
+1395574337 source:/home/vince/Téléchargements/PPE_server/SynchronizedList.cpp
+	"SynchronizedList.h"
+
