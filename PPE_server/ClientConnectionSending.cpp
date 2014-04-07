@@ -37,6 +37,7 @@ bool ClientConnectionSending::waitForClient()
 }
 bool ClientConnectionSending::sendData()
 {
+    bool alreadyGotAnError = false;
     int n = 0;
     char buffer[256];
     do{
@@ -46,8 +47,20 @@ bool ClientConnectionSending::sendData()
             std::string send = toSend->getFirstElement();
             std::strcpy(buffer,send.c_str() );
             n = write(clientSocket,buffer,255);
-            if(n==-1)
+            if(n==-1 || n==0)
+            {
                 printf("error while writing");
+                if(alreadyGotAnError)
+                {
+                    printf("Client seems disconnected exiting loop \n");
+                    return false;
+                }
+                else
+                    alreadyGotAnError = true;
+            }
+            else
+                alreadyGotAnError = false;
+
             printf("send: %s",buffer);
         }
 
@@ -57,9 +70,13 @@ bool ClientConnectionSending::sendData()
 
 void ClientConnectionSending::connectionLoop()
 {
-    std::cout << "launching sending process";
-    sleep(1);
-    initConnection();
-    waitForClient();
-    sendData();
+    while(1)
+    {
+        std::cout << "launching sending process";
+        sleep(1);
+        initConnection();
+        waitForClient();
+        sendData();
+    }
+
 }

@@ -36,6 +36,7 @@ bool ClientConnectionReading::waitForClient()
 }
 bool ClientConnectionReading::waitForDataReception()
 {
+    bool alreadyGotAnError = false;
     int n = 0;
     char buffer[256];
     do{
@@ -48,8 +49,18 @@ bool ClientConnectionReading::waitForDataReception()
         if(n==-1 || n==0)
         {
             printf("Error while reading\n");
-            getchar();//wait for key strike
+            if(alreadyGotAnError)
+            {
+                printf("client seems disconnected exiting loop\n");
+                return false;
+            }
+            else
+                alreadyGotAnError = true;
+
+            //getchar();//wait for key strike
         }
+        else
+            alreadyGotAnError = false;
 
         printf("received : %s , n : %d\n",buffer,n);
         obj->addElement( std::string(buffer) );
@@ -59,10 +70,14 @@ bool ClientConnectionReading::waitForDataReception()
 
 void ClientConnectionReading::connectionLoop()
 {
-    std::cout << "launching reading process";
-    sleep(1);
-    initConnection();
-    waitForClient();
-    waitForDataReception();
+    while(1)
+    {
+        std::cout << "launching reading process";
+        sleep(1);
+        initConnection();
+        waitForClient();
+        waitForDataReception();
+    }
+
 }
 

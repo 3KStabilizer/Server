@@ -42,11 +42,11 @@
 	<netinet/in.h>
 	"SynchronizedList.h"
 
-1395573551 source:/home/vince/Téléchargements/PPE_server/HardwareCommunication.cpp
+1396217732 source:/home/vince/Téléchargements/PPE_server/HardwareCommunication.cpp
 	"HardwareCommunication.h"
 	<iostream>
 
-1395573507 /home/vince/Téléchargements/PPE_server/HardwareCommunication.h
+1396217732 /home/vince/Téléchargements/PPE_server/HardwareCommunication.h
 
 1395869748 source:/home/vince/Téléchargements/PPE_server/ClientConnection.cpp
 	"ClientConnection.h"
