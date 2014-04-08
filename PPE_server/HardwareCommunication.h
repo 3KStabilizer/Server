@@ -1,7 +1,7 @@
 #ifndef HARDWARECOMMUNICATION_H_INCLUDED
 #define HARDWARECOMMUNICATION_H_INCLUDED
 
-//#include <wiringPi.h>
+#include <wiringPi.h>
 
 class HardwareCommunication
 {
